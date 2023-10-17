@@ -44,4 +44,10 @@ public class test2_1 {
         assertEquals(false, s.solution("((())")); // false
     }
 
+    @Test
+    public void solution7(){
+        solution2_1 s = new solution2_1();
+        assertEquals(false, s.solution("())(()")); // false
+    }
+
 }

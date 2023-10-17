@@ -6,21 +6,23 @@ public class solution2_1 {
 
         int count = 0;
 
-        if(")".equals(String.valueOf(s.charAt(0)))) return false;
-
-        for(int i=0; i<s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             if("(".equals(String.valueOf(s.charAt(i)))){
                 count += 1;
             }
-            else {
+            else{
                 count -= 1;
+            }
+
+            if(count<0){
+                break;
             }
         }
 
-        if(count==0){
-            return answer;
-        }else{
-            return false;
-        }
+        if(count <0) return false;
+
+        if(count == 0) return true;
+
+        return false;
     }
 }
